@@ -1,5 +1,5 @@
 ---
-
+const pageTitle = "Pestaña 2";
 ---
 
 <html lang="en">
@@ -9,7 +9,7 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<a href="/">Inicio</a>
@@ -17,5 +17,6 @@
 		<a href="/blog/">Blog</a>
 
 		<h1>Primera versión nueva página Automotriz</h1>
+		<h2>{pageTitle}</h2>
 	</body>
 </html>
