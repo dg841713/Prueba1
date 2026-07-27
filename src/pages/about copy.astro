@@ -1,7 +1,11 @@
 ---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import '../styles/global.css';
 
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Página de inicio";
+
+
+const pageTitle = "Sobre mi";
 
 const identity = {
   firstName: "Sarah",
@@ -9,19 +13,17 @@ const identity = {
   occupation: "Escritor técnico",
   hobbies: ["fotografia", "observación de aves", "peñarol"],
 };
+
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Redacción de documentos"];
+
 const happy = true;
-const finished = true;
+const finished = false;
 const goal = 3;
+
 const skillColor = "blue";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
-
-
-<BaseLayout pageTitle={pageTitle}>
-  <h2>Mi impresionante subtítulo del blog</h2>
-
 
 <html lang="es">
  	 <head>
@@ -44,6 +46,8 @@ const textCase = "uppercase";
   </head>
 
 	<body>
+		<Header />
+
 		<h1>Nueva página Automotriz</h1>
 		<h1>{pageTitle}</h1>
   <h2>Prueba! Diego García</h2>
@@ -67,7 +71,11 @@ const textCase = "uppercase";
 
 {goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
 
+		<Footer />
+  		<script>
+    		import "../scripts/menu.js";
+  		</script>
+
+
 	</body>
 </html>
-  
-</BaseLayout>
